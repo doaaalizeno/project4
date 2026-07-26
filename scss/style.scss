@@ -1,0 +1,16 @@
+@import './helpers/variabies';
+@import './helpers/global';
+@import './helpers/mixins';
+
+@import './components/buttons';
+@import './components/product';
+@import './/components/testimonial';
+@import './components/mobile_menu';
+@import './components/product_card';
+
+@import './layout/footer';
+@import './layout/header';
+
+@import './pages/index';
+@import './pages/single-product';
+

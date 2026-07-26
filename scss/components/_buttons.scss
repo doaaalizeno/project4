@@ -1,0 +1,27 @@
+%btn{
+     color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: cairo;
+    transition: 0.3s;
+
+}
+
+.btn-brimary{
+    @extend %btn;
+    background-color: $mainColor;
+    &:hover{
+        background-color: darken($mainColor ,5%);
+    }
+   
+    
+}
+.btn-danger{
+    @extend %btn;
+    background-color: $seconderyColor;
+     &:hover{
+        background-color: darken($seconderyColor ,10%)
+    }
+    
+}

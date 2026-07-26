@@ -1,0 +1,33 @@
+$mainColor: #1e3a66;        // اللون الرئيسي - كحلي ليلي
+$seconderyColor: #B8965A;   // اللون الثانوي - ذهبي معتّق
+$linkColor: #1B2430;        // لون الروابط - فحمي
+
+$backgroundColor: #F8F5F0;  // خلفية الموقع
+$cardColor: #FFFFFF;        // بطاقات العقارات
+$textColor: #1B2430;        // النص الأساسي
+$textLight: #8A8F98;        // النص الثانوي
+$borderColor: #E5E7EB;      // الحدود
+$hoverColor: #9F7E48;       // hover للأزرار
+
+$headerColor: #0B1320;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+
+);
+
+
+
+$container-widths: (
+  
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);

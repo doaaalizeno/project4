@@ -1,0 +1,143 @@
+.footer {
+   
+    background-image: url("../../assets/images/ss.webp");
+    background-size: contain;
+    background-position: center;
+    
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.822);
+
+     .contact{
+        padding-top: 15px ;
+        padding-bottom: 15px;
+        margin-bottom: 60px;
+        border-radius: 0  0 40px 40px ;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+        border-top: 2px solid $seconderyColor ;
+        font-size: 20px;
+        .inner-contact{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            
+            
+           
+h5{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+           
+            a{
+                color: #b4b4b4;
+                font-size: 16px;
+               i{
+                font-size: 40px;
+                 color: $seconderyColor;
+               }
+            }
+            
+
+            
+           
+
+        }
+
+        
+        div:nth-child(2){
+            border-left: 1px solid #aaa7a7;
+            border-right: 1px solid #aaa7a7;
+        }
+       
+     }
+
+
+    .inner-footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+
+        .footer-box {
+            .logo {
+                width: 100px;
+                border-radius: 50%;
+            }
+
+            h3 {
+                color: white;
+                font-size: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.644);
+                font-size: 14px;
+                width: 85%;
+                margin-top: 8px;
+               
+                
+            }
+
+
+            a {
+                color: rgba(255, 255, 255, 0.644);
+
+                &:hover {
+                    color: $seconderyColor;
+                }
+
+
+            }
+
+            li {
+                margin-bottom: 15px;
+                border-bottom: 1px dotted #eeeeee50;
+                width: 70%;
+
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    font-family: cairo;
+
+                }
+
+                button {
+                    border: none;
+                }
+            }
+
+            .icons {
+                margin-top: 15px;
+                display: flex;
+                gap: 20px;
+
+                i {
+                    font-size: 25px;
+                    transition: 0.3s;
+
+                    &:hover {
+                        scale: 1.05;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
