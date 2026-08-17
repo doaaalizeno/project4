@@ -79,8 +79,6 @@
                     border-left: 1px solid #ccc;
                 }
 
-
-
                 div {
                     width: 50%;
                     padding-right: 20px;
@@ -104,25 +102,26 @@
                             }
                         }
                     }
-
                 }
-@media (max-width: 768px) {
-    .props {
-        li {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-            gap: 10px;
-            font-size: 13px;
 
-            span {
-                white-space: nowrap;
-                font-weight: bold;
+                // 📱 شاشة الموبايل
+                @media (max-width: 768px) {
+                    flex-direction: column;
+
+                    div {
+                        width: 100%;
+                    }
+
+                    // إلغاء الخط العمودي وتحويله لأفقي
+                    div:first-child {
+                        border-left: none;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 15px;
+                        margin-bottom: 20px;
+                    }
+                }
             }
-        }
-    }
-}
-            }
+
 
             .extra-props {
                 background-color: #eeeeeee3;
@@ -151,9 +150,6 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-
-
-
                     }
 
                     h3 {
@@ -164,6 +160,17 @@
                     p {
                         margin: 10px 0;
                         color: $hoverColor;
+                    }
+                }
+
+                // 📱 شاشة الموبايل
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .box {
+                        width: 100%;
+                        box-sizing: border-box;
                     }
                 }
             }
@@ -197,62 +204,63 @@
             }
 
             .inner-props {
-                background-color: #eeeeee79;
-                display: flex;
-                padding: 20px;
-                border-radius: 6px;
-                gap: 15px;
-                margin-top: 20px;
+    background-color: #eeeeee79;
+    display: flex;
+    padding: 20px;
+    border-radius: 6px;
+    gap: 15px;
+    margin-top: 20px;
 
-                .box {
-                    width: 33%;
+    .box {
+        width: 33%;
 
-                    ul {
-                        li {
-                            margin-bottom: 15px;
-                            position: relative;
-                            margin-right: 25px;
-                            border-bottom: 1px dotted #c0c0c0;
-                            padding-bottom: 8px;
-                            width: fit-content;
-                            font-size: 16px;
+        ul {
+            li {
+                margin-bottom: 15px;
+                position: relative;
+                margin-right: 25px;
+                border-bottom: 1px dotted #c0c0c0;
+                padding-bottom: 8px;
+                width: fit-content;
+                font-size: 16px;
 
-
-                            &::before {
-                                position: absolute;
-                                content: "\f00c";
-
-                                font-weight: bold;
-                                font-family: "Font Awesome 5 Free";
-                                background-color: $mainColor;
-                                width: 18px;
-                                height: 18px;
-                                border-radius: 50%;
-                                top: 50%;
-                                transform: translateY(-50%);
-                                right: -25px;
-                                color: white;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-
-
-                            }
-
-                        }
-
-                        @media (max-width: 768px) {
-                            li {
-                                font-size: 14px;
-                            }
-
-
-                        }
-                    }
+                &::before {
+                    position: absolute;
+                    content: "\f00c";
+                    font-weight: bold;
+                    font-family: "Font Awesome 5 Free";
+                    background-color: $mainColor;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -25px;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
-
             }
+        }
+    }
 
+    // 📱 شاشة الموبايل
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+
+        .box {
+            width: 100%;
+        }
+
+        .box ul {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+}
             form {
                 background-color: #eeeeee80;
                 width: 100%;
@@ -274,12 +282,15 @@
 
 
                 }
-                label{padding: 10px;}
+
+                label {
+                    padding: 10px;
+                }
 
                 .inputs {
                     display: flex;
                     gap: 15px;
-                   
+
 
                     div {
                         width: 100%;
@@ -293,7 +304,7 @@
                             margin-bottom: 15px;
                             width: 100%;
                             padding-right: 15px;
-                            
+
 
                             &:focus {
                                 outline: 1px solid #ccc;
@@ -693,15 +704,15 @@
 
 
 
-aside{
-    .mobile-menu{
-        ul{
-            li{
-                a{
-                     color: $mainColor;
+aside {
+    .mobile-menu {
+        ul {
+            li {
+                a {
+                    color: $mainColor;
 
                 }
-               
+
             }
         }
 

@@ -1040,16 +1040,17 @@ body {
   left: 15%;
 }
 @media (max-width: 768px) {
-  .page-content .row .right-section .props .props li {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
+  .page-content .row .right-section .props {
+    flex-direction: column;
   }
-  .page-content .row .right-section .props .props li span {
-    white-space: nowrap;
-    font-weight: bold;
+  .page-content .row .right-section .props div {
+    width: 100%;
+  }
+  .page-content .row .right-section .props div:first-child {
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 .page-content .row .right-section .extra-props {
@@ -1087,6 +1088,16 @@ body {
 .page-content .row .right-section .extra-props .box p {
   margin: 10px 0;
   color: #9F7E48;
+}
+@media (max-width: 768px) {
+  .page-content .row .right-section .extra-props {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .page-content .row .right-section .extra-props .box {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 .page-content .row .right-section .swiper-slide {
   width: 100%;
@@ -1148,6 +1159,13 @@ body {
   justify-content: center;
 }
 @media (max-width: 768px) {
+  .page-content .row .right-section .inner-props {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .page-content .row .right-section .inner-props .box {
+    width: 100%;
+  }
   .page-content .row .right-section .inner-props .box ul li {
     font-size: 14px;
   }
