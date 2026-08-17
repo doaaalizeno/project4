@@ -1,59 +1,61 @@
 .footer {
-   
+
     background-image: url("../../assets/images/ss.webp");
     background-size: contain;
     background-position: center;
-    
+
     padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.822);
 
-     .contact{
-        padding-top: 15px ;
+    .contact {
+        padding-top: 15px;
         padding-bottom: 15px;
         margin-bottom: 60px;
-        border-radius: 0  0 40px 40px ;
+        border-radius: 0 0 40px 40px;
         background-color: white;
         display: grid;
-        grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         border-top: 2px solid $seconderyColor ;
         font-size: 20px;
-        .inner-contact{
+
+        .inner-contact {
             display: flex;
             flex-direction: row-reverse;
             justify-content: center;
             gap: 20px;
             align-items: center;
-            
-            
-           
-h5{
-    font-weight: bold;
-    font-size: 17px;
-}
 
-           
-            a{
+
+
+            h5 {
+                font-weight: bold;
+                font-size: 17px;
+            }
+
+
+            a {
                 color: #b4b4b4;
                 font-size: 16px;
-               i{
-                font-size: 40px;
-                 color: $seconderyColor;
-               }
-            }
-            
 
-            
-           
+                i {
+                    font-size: 40px;
+                    color: $seconderyColor;
+                }
+            }
+
+
+
+
 
         }
 
-        
-        div:nth-child(2){
+
+        div:nth-child(2) {
             border-left: 1px solid #aaa7a7;
             border-right: 1px solid #aaa7a7;
         }
-       
-     }
+
+    }
 
 
     .inner-footer {
@@ -79,8 +81,8 @@ h5{
                 font-size: 14px;
                 width: 85%;
                 margin-top: 8px;
-               
-                
+
+
             }
 
 
@@ -140,4 +142,38 @@ h5{
 
         }
     }
+
+
+    .footer-bottom {
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #555;
+
+    color: #ddd;
+    font-size: 14px;
+
+    p {
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 15px 20px;
+
+        p {
+            font-size: 13px;
+        }
+    }
+}
 }

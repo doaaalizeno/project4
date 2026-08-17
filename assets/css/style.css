@@ -402,6 +402,34 @@ aside .mobile-menu .cta {
 .footer .inner-footer .footer-box .icons i:hover {
   scale: 1.05;
 }
+.footer .footer-bottom {
+  width: 100%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #555;
+  color: #ddd;
+  font-size: 14px;
+}
+.footer .footer-bottom p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .footer .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+  .footer .footer-bottom p {
+    font-size: 13px;
+  }
+}
 
 header {
   background-color: #0B1320;
