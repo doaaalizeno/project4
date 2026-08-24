@@ -6,15 +6,19 @@ header {
 
     height: 60px;
 
-   
-
     @include flexbox();
 
     nav {
         @include flexbox(space-between);
         @include container;
 
+        
+            
+            
+            
+            
 
+        
 
         ul {
             list-style: none;
@@ -81,5 +85,3 @@ header {
     }
 
 }
-
-
