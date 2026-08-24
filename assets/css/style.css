@@ -120,7 +120,7 @@ aside {
   position: fixed;
   margin-top: 5px;
   border-top-left-radius: 10px;
-  right: -250px;
+  right: -300px;
   transition: 0.3s;
   z-index: 2000;
   box-shadow: 2px 2px 10px rgba(12, 21, 95, 0.616);
@@ -143,7 +143,7 @@ aside .mobile-menu ul {
   list-style: none;
 }
 aside .mobile-menu ul li {
-  padding: 10px;
+  padding: 8px;
   border-bottom: 1px solid rgba(138, 143, 152, 0.2862745098);
 }
 aside .mobile-menu ul li:hover {
