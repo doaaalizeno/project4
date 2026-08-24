@@ -114,7 +114,7 @@ img {
 }
 
 aside {
-  width: 225px;
+  width: 250px;
   background-color: #F8F5F0;
   height: calc(100vh - 60px);
   position: fixed;
@@ -174,7 +174,7 @@ aside .mobile-menu .icons i:hover {
   transform: translateY(-2px) scale(1.1);
 }
 aside .mobile-menu form {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
 }
 aside .mobile-menu form input {
