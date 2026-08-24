@@ -114,7 +114,7 @@ img {
 }
 
 aside {
-  width: 250px;
+  width: 225px;
   background-color: #F8F5F0;
   height: calc(100vh - 60px);
   position: fixed;
@@ -130,7 +130,7 @@ aside {
   border-radius: 18px;
 }
 aside .mobile-menu {
-  padding: 20px;
+  padding: 8px;
 }
 aside .mobile-menu .logo {
   letter-spacing: 1px;
