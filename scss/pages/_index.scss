@@ -1,8 +1,5 @@
-
-
 body {
     height: 3500px;
-    overflow-x: hidden !important;
 }
 
 
@@ -221,7 +218,7 @@ body {
 
 
 .testimonials {
-     position: relative;
+    position: relative;
     padding: 50px 0;
 
     &.testimonials::before {
@@ -238,6 +235,7 @@ body {
         opacity: 0.4;
 
     }
+
     padding-top: 50px;
     padding-bottom: 50px;
 
@@ -245,8 +243,19 @@ body {
     .all-testimonials {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: 1fr;
         gap: 25px;
+
+        
+
+            @include media-up(md) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include media-up(lg) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        
 
 
         .box {
@@ -316,11 +325,10 @@ body {
 // القسم الخامس
 
 .partners {
-     position: relative;
-   
-    padding-right: 35px;
+    position: relative;
     padding: 50px 0;
-     &.partners::before {
+
+    &::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -328,20 +336,29 @@ body {
         bottom: 0;
         content: "";
         background-image: url('../../assets/images/ee.jfif');
-
         background-position: center;
         background-size: cover;
         opacity: 0.5;
-
     }
-    p{
-         font-size: clamp(10px, 5vw, 20px);
+
+    .section-desc {
+        font-size: clamp(10px, 5vw, 20px);
+        text-align: center;
+        padding: 0 15px;
     }
 
     .logos {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+
+        @include media-up(md) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media-up(lg) {
+            grid-template-columns: repeat(6, 1fr);
+        }
 
         .image {
             img {
@@ -362,16 +379,22 @@ body {
 
 }
 
-
 .blog {
     background-color: white;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding: 50px 0;
 
     .all-blogs {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: 1fr;
         gap: 30px;
+
+        @include media-up(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         .blog-card {
             background-color: #eee;
@@ -379,10 +402,10 @@ body {
             border-radius: 3px;
             box-shadow: 3px 3px 10px #b8965a88;
             cursor: pointer;
+            min-width: 0;
 
             &:hover {
-                transform: translatey(-5px);
-
+                transform: translateY(-5px);
             }
 
             .image {
@@ -404,6 +427,7 @@ body {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    display: block;
                 }
             }
 
@@ -412,7 +436,6 @@ body {
 
                 h3 {
                     color: $mainColor;
-
                 }
 
                 p {
@@ -432,6 +455,7 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    gap: 10px;
 
                     .btn-danger {
                         border: none;
@@ -440,11 +464,17 @@ body {
                     .author {
                         display: flex;
                         align-items: center;
+                        min-width: 0;
+
+                        span {
+                            white-space: nowrap;
+                        }
 
                         .author-img {
                             margin-right: 15px;
                             width: 70px;
                             height: 70px;
+                            min-width: 70px;
                             border-radius: 50%;
                             border: 2px solid $seconderyColor;
                             overflow: hidden;
@@ -463,20 +493,31 @@ body {
 }
 
 
-
 // قسم معرض الصور
 .gallary {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: rgba(10, 10, 10, 0.089);
-    .section-desc{
+
+    .section-desc {
         font-size: clamp(15px, 5vw, 24px);
     }
 
     .all-images {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns:  1fr;
         gap: 30px;
+
+
+
+    @include media-up(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 
         .image {
             border-radius: 10px;
@@ -522,7 +563,7 @@ body {
                 p {
                     font-size: 14px;
                 }
-                
+
 
             }
 

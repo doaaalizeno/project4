@@ -8,6 +8,7 @@
 body {
   background-color: rgb(235, 235, 235);
   font-family: cairo;
+  overflow-x: hidden !important;
 }
 
 a {
@@ -537,7 +538,6 @@ header nav .mobil-nav-icon {
 
 body {
   height: 3500px;
-  overflow-x: hidden !important;
 }
 
 .hero {
@@ -755,8 +755,18 @@ body {
 .testimonials .all-testimonials {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: 1fr;
   gap: 25px;
+}
+@media (min-width: 768px) {
+  .testimonials .all-testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .testimonials .all-testimonials {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .testimonials .all-testimonials .box {
   background-color: rgba(6, 13, 77, 0.137);
@@ -810,10 +820,9 @@ body {
 
 .partners {
   position: relative;
-  padding-right: 35px;
   padding: 50px 0;
 }
-.partners.partners::before {
+.partners::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -825,13 +834,25 @@ body {
   background-size: cover;
   opacity: 0.5;
 }
-.partners p {
+.partners .section-desc {
   font-size: clamp(10px, 5vw, 20px);
+  text-align: center;
+  padding: 0 15px;
 }
 .partners .logos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+@media (min-width: 768px) {
+  .partners .logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .partners .logos {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 .partners .logos .image img {
   cursor: pointer;
@@ -846,13 +867,22 @@ body {
 
 .blog {
   background-color: white;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 .blog .all-blogs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: 1fr;
   gap: 30px;
+}
+@media (min-width: 768px) {
+  .blog .all-blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .blog .all-blogs {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .blog .all-blogs .blog-card {
   background-color: #eee;
@@ -860,9 +890,10 @@ body {
   border-radius: 3px;
   box-shadow: 3px 3px 10px rgba(184, 150, 90, 0.5333333333);
   cursor: pointer;
+  min-width: 0;
 }
 .blog .all-blogs .blog-card:hover {
-  transform: translatey(-5px);
+  transform: translateY(-5px);
 }
 .blog .all-blogs .blog-card .image {
   position: relative;
@@ -882,6 +913,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 .blog .all-blogs .blog-card .info {
   padding: 15px;
@@ -904,6 +936,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 .blog .all-blogs .blog-card .info .blog-footer .btn-danger {
   border: none;
@@ -911,11 +944,16 @@ body {
 .blog .all-blogs .blog-card .info .blog-footer .author {
   display: flex;
   align-items: center;
+  min-width: 0;
+}
+.blog .all-blogs .blog-card .info .blog-footer .author span {
+  white-space: nowrap;
 }
 .blog .all-blogs .blog-card .info .blog-footer .author .author-img {
   margin-right: 15px;
   width: 70px;
   height: 70px;
+  min-width: 70px;
   border-radius: 50%;
   border: 2px solid #B8965A;
   overflow: hidden;
@@ -936,8 +974,18 @@ body {
 }
 .gallary .all-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: 1fr;
   gap: 30px;
+}
+@media (min-width: 768px) {
+  .gallary .all-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .gallary .all-images {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .gallary .all-images .image {
   border-radius: 10px;
