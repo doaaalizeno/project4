@@ -103,38 +103,43 @@ body {
 
 
 .about {
-    // background-image: url('../../assets/images/hrro.jfif');
-    // background-position:center ;
-    // background-size: cover;
     position: relative;
     padding: 50px 0;
+    overflow: hidden;
 
-    &.about::before {
+    // صورة الخلفية واللمعة
+    &::before {
         position: absolute;
+        content: "";
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        content: "";
-        background-image: url('../../assets/images/img1.jfif');
 
+        background-image: url('../../assets/images/img1.jfif');
         background-position: center;
         background-size: cover;
-        opacity: 0.4;
+        background-repeat: no-repeat;
 
+        opacity: 0.4;
+        z-index: 0;
     }
 
-    padding-top: 50px;
-
+    // محتوى القسم يكون فوق الصورة
     .inner-about {
+        position: relative;
+        z-index: 2;
+
         @include media-up(md) {
-            @include flexbox(center, center, row)
+            @include flexbox(center, center, row);
         }
 
         .right-section {
+            position: relative;
+            z-index: 3;
+
             @include media-up(md) {
                 width: 50%;
-
             }
 
             ul {
@@ -162,16 +167,10 @@ body {
                         font-weight: bold;
                         font-family: "Font Awesome 5 Free";
                         width: 16px;
-                        right: -25PX;
+                        right: -25px;
                         top: 50%;
                         transform: translateY(-50%);
-
-
-
-
                     }
-
-
                 }
             }
 
@@ -185,35 +184,33 @@ body {
                 }
             }
 
+            // الزر
             .btn-danger {
+                position: relative;
+                z-index: 5;
                 cursor: pointer;
                 border: none;
-
             }
-
-
-
         }
 
         .left-section {
+            position: relative;
+            z-index: 3;
             margin-top: 30px;
-
 
             @include media-up(md) {
                 width: 50%;
-
             }
 
             img {
+                display: block;
                 max-width: 100%;
                 border-radius: 20px;
                 overflow: hidden;
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.507);
             }
-
         }
     }
-
 }
 
 
@@ -246,16 +243,16 @@ body {
         grid-template-columns: 1fr;
         gap: 25px;
 
-        
 
-            @include media-up(md) {
-                grid-template-columns: repeat(2, 1fr);
-            }
 
-            @include media-up(lg) {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        
+        @include media-up(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
 
 
         .box {
@@ -459,6 +456,15 @@ body {
 
                     .btn-danger {
                         border: none;
+
+
+                        @media (max-width: 767px) {
+                            .btn-danger {
+                                padding: 6px 12px;
+                                font-size: 12px;
+                                min-width: 80px;
+                            }
+                        }
                     }
 
                     .author {
@@ -505,18 +511,18 @@ body {
 
     .all-images {
         display: grid;
-        grid-template-columns:  1fr;
+        grid-template-columns: 1fr;
         gap: 30px;
 
 
 
-    @include media-up(md) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+        @include media-up(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    @include media-up(lg) {
-        grid-template-columns: repeat(3, 1fr);
-    }
+        @include media-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
 
         .image {
