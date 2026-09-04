@@ -1,13 +1,10 @@
 aside {
     width: 250px;
-    max-width: 80%;
-    box-sizing: border-box;
     background-color: $backgroundColor ;
     height: calc(100vh - 60px);
     position: fixed;
     margin-top: 5px;
     border-top-left-radius: 10px;
-    top: 60px;
     right: -300px;
     transition: 0.3s;
     z-index: 2000;
@@ -20,9 +17,6 @@ aside {
 
     .mobile-menu {
         padding: 8px;
-        width: 100%;
-        box-sizing: border-box;
-
         
         
 
@@ -80,7 +74,6 @@ aside {
         form {
             margin-top: 10px;
             width: 100%;
-            box-sizing: border-box;
 
             input {
                 width: 100%;
@@ -88,7 +81,6 @@ aside {
                 border: 1px solid #d3d4db;
                 border-radius: 5px;
                 padding-right: 20px;
-                box-sizing: border-box;
 
                 &:focus {
                     outline: none;

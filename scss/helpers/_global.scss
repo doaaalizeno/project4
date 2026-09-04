@@ -12,11 +12,6 @@ body {
     overflow-x: hidden !important;
 
 }
-html,body{
-    width: 100%;
-    max-width: 100%;
-    
-}
 
 
 a {
@@ -30,14 +25,15 @@ img{
     max-width: 100%;
 }
 
-.section-title{
+.section-title {
     font-size: 30px;
     color: $mainColor;
     text-align: center;
     width: fit-content;
     margin: auto;
     position: relative;
-    &::before{
+
+    &::before {
         position: absolute;
         content: "";
         width: 70px;
@@ -46,14 +42,29 @@ img{
         right: -80px;
         top: 50%;
     }
-     &::after{
+
+    &::after {
         position: absolute;
         content: "";
         width: 70px;
         height: 2px;
         background-color: $mainColor;
-        left:  -80px;
+        left: -80px;
         top: 50%;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 22px;
+
+        &::before {
+            width: 35px;
+            right: -45px;
+        }
+
+        &::after {
+            width: 35px;
+            left: -45px;
+        }
     }
 }
 .section-desc{
